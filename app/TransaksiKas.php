@@ -8,6 +8,6 @@ class TransaksiKas extends Model
 {
     //
 
-        protected $fillable = ['no_faktur','jenis_transaksi','tipe_transaksi','jumlah' ,'kas' ];
+        protected $fillable = ['no_faktur','jenis_transaksi','tipe_transaksi','jumlah_masuk' ,'jumlah_keluar' ,'kas' ];
 
 }

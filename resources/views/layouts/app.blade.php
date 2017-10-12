@@ -97,6 +97,18 @@
                                         <span class="sidebar-normal">Kas Masuk</span>
                                     </a>
                                 </li> 
+                                <li>
+                                    <a href="{{ route('kas_keluar.index') }}">
+                                        <span class="sidebar-mini">KK</span>
+                                        <span class="sidebar-normal">Kas Keluar</span>
+                                    </a>
+                                </li> 
+                                <li>
+                                    <a href="{{ route('kas_mutasi.index') }}">
+                                        <span class="sidebar-mini">KMT</span>
+                                        <span class="sidebar-normal">Kas Mutasi</span>
+                                    </a>
+                                </li> 
                                  
 
                             </ul>

@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    echo App\KasMasuk::no_faktur();
-});
+Route::get('/', 'HomeController@index');
 
 Auth::routes();
 
@@ -26,6 +24,8 @@ Route::group(['middleware' =>'auth'], function(){
 	Route::resource('kategori_transaksi', 'KategoriTransaksiController');
 	Route::resource('kas', 'KasController');
 	Route::resource('kas_masuk', 'KasMasukController');
+	Route::resource('kas_keluar', 'KasKeluarController');
+	Route::resource('kas_mutasi', 'KasMutasiController');
 	Route::resource('komisi', 'KomisiProdukController');
 	Route::resource('produk', 'ProdukController');
 	Route::resource('pasien', 'PasienController');

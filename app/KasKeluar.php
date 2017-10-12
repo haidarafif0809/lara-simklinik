@@ -4,11 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB; 
-class KasMasuk extends Model
+
+class KasKeluar extends Model
 {
     //
 
-    protected $fillable = ['no_faktur','kas','kategori','jumlah','keterangan' ];
+     protected $fillable = ['no_faktur','kas','kategori','jumlah','keterangan' ];
 
     public function kas(){
     	return $this->belongsTo('App\Kas','kas','id');
@@ -17,7 +18,8 @@ class KasMasuk extends Model
     	return $this->belongsTo('App\KategoriTransaksi','kategori','id');
     }
 
-    public static function no_faktur(){
+
+      public static function no_faktur(){
 
         $tahun_sekarang = date('Y');
         $bulan_sekarang = date('m');
@@ -35,7 +37,7 @@ class KasMasuk extends Model
          }
       
       //ambil bulan dan no_faktur dari tanggal item_keluar terakhir
-         $item_keluar = KasMasuk::select([DB::raw('MONTH(created_at) bulan'), 'no_faktur'])->orderBy('id','DESC')->first();
+         $item_keluar = KasKeluar::select([DB::raw('MONTH(created_at) bulan'), 'no_faktur'])->orderBy('id','DESC')->first();
 
 
          if ($item_keluar != NULL) {
@@ -52,11 +54,11 @@ class KasMasuk extends Model
       maka nomor nya kembali mulai dari 1, jika tidak maka nomor terakhir ditambah dengan 1
       */
         if ($bulan_akhir != $bulan_sekarang) {
-          $no_faktur = "1/KM/".$data_bulan_terakhir."/".$tahun_terakhir;
+          $no_faktur = "1/KK/".$data_bulan_terakhir."/".$tahun_terakhir;
         }
         else {
           $nomor = 1 + $ambil_nomor ;
-          $no_faktur = $nomor."/KM/".$data_bulan_terakhir."/".$tahun_terakhir;
+          $no_faktur = $nomor."/KK/".$data_bulan_terakhir."/".$tahun_terakhir;
         }
 
         return $no_faktur;

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTransaksiKasTable extends Migration
+class CreateKasMutasisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateTransaksiKasTable extends Migration
      */
     public function up()
     {
-        Schema::create('transaksi_kas', function (Blueprint $table) {
+        Schema::create('kas_mutasis', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('jenis_transaksi');
-            $table->integer('kas');
-            $table->string('no_faktur');
-            $table->float('jumlah_masuk',11,2)->default(0.00);
-            $table->float('jumlah_keluar',11,2)->default(0.00);
+            $table->string('no_faktur')->unique();
+            $table->integer('dari_kas');
+            $table->integer('ke_kas');
+            $table->float('jumlah',11,2)->default(0.00);
+            $table->text('keterangan')->nullable();
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateTransaksiKasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transaksi_kas');
+        Schema::dropIfExists('kas_mutasis');
     }
 }
