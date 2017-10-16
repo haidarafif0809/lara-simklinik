@@ -71,6 +71,14 @@
 	</div>
 </div>
 
+<div class="form-group{{ $errors->has('status_aktif') ? ' has-error' : '' }}">
+	{!! Form::label('status_aktif', 'Status Aktif', ['class'=>'col-md-2 control-label']) !!}
+	<div class="col-md-4">
+		{!! Form::select('status_aktif', ['1' => 'Aktif','0' => 'Tidak Aktif' ],null, ['class'=>'form-control js-selectize-reguler', 'placeholder' => 'Status Aktif']) !!}
+		{!! $errors->first('status_aktif', '<p class="help-block">:message</p>') !!}
+	</div>
+</div>
+
 
 
 

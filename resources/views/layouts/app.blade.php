@@ -113,6 +113,24 @@
 
                             </ul>
                         </div>
+                    </li> 
+                    <li>
+                        <a data-toggle="collapse" href="#persediaan">
+                            <i class="material-icons">image</i>
+                            <p> Persediaan
+                                <b class="caret"></b>
+                            </p>
+                        </a>
+                        <div class="collapse" id="persediaan">
+                            <ul class="nav">
+                                  <li>
+                                    <a href="{{ route('item-masuk.index') }}">
+                                        <span class="sidebar-mini">IM</span>
+                                        <span class="sidebar-normal">Item Masuk</span>
+                                    </a>
+                                </li> 
+                            </ul>
+                        </div>
                     </li>
             
     
