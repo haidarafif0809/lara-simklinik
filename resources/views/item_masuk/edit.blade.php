@@ -2,44 +2,7 @@
 
 @section('content')
 
-<!-- MODAL PILIH PRODUK -->
-  <div class="modal" id="modal_produk" role="dialog" data-backdrop="">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Data Produk</h4>
-        </div>
-        <div class="modal-body">
-          {!! Form::open(['url' => route('item-masuk.proses_tambah_edit_tbs_item_masuk', $item_masuk->id),'<main></main>ethod' => 'post', 'class'=>'form-horizontal']) !!}
-	          <div class="form-group{{ $errors->has('id_produk') ? ' has-error' : '' }}">
-					{!! Form::label('id_produk', 'Pilih Produk', ['class'=>'col-md-3 control-label']) !!}
-					<div class="col-md-6">
-						{!! Form::select('id_produk', []+App\Produk::where('status_aktif','Aktif')->select([DB::raw('CONCAT(kode_produk, " - ", nama_produk) AS data_produk'),'id'])->pluck('data_produk','id')->all(), null, ['class'=>'form-control js-selectize-reguler','required', 'placeholder' => '--SILAKAN PILIH--', 'id'=>'pilih_produk']) !!}
-						{!! $errors->first('id_produk', '<p class="help-block">:message</p>') !!}
-					</div>
-				</div>
 
-				<div class="form-group{{ $errors->has('jumlah_produk') ? ' has-error' : '' }}">
-					{!! Form::label('jumlah_produk', 'Jumlah Produk', ['class'=>'col-md-3 control-label']) !!}
-					<div class="col-md-6">
-						{!! Form::text('jumlah_produk', 1, ['class'=>'form-control','placeholder'=>'Jumlah Produk','required','autocomplete'=>'off', 'id'=>'jumlah_produk']) !!}
-						{!! $errors->first('jumlah_produk', '<p class="help-block" id="eror_jumlah_produk">:message</p>') !!}
-					</div>
-				</div>
-        </div>
-        <div class="modal-footer"> 
-		   <button type="submit" class="btn btn-success"><i class="material-icons">done</i> Submit Produk</button>
-		 {!! Form::close() !!} 
-          <button type="button" class="btn btn-default" data-dismiss="modal"><i class="material-icons">close</i> Close</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-<!-- / MODAL PILIH PRODUK -->
 
 <!-- MODAL TOMBOL SELESAI -->
   <div class="modal" id="modal_selesai" role="dialog" data-backdrop="">
@@ -88,21 +51,23 @@
 					<div class="row">
 						
 						<div class="col-md-7">
-							<!--FORM BARCODE ITEM Masuk -->
-								{!! Form::open(['url' => route('item-masuk.proses_barcode_edit_item_masuk',$item_masuk->id),'method' => 'post', 'class'=>'form-horizontal']) !!}
-									<div class="form-group{{ $errors->has('barcode') ? ' has-error' : '' }}"> 
-										<div class="col-md-6">				
-											{!! Form::text('barcode', null, ['class'=>'form-control','placeholder'=>'Barcode','required','autocomplete'=>'off', 'id'=>'kode_barcode']) !!}
-											{!! $errors->first('barcode', '<p class="help-block">:message</p>') !!}
-										</div> 
+						<!-- form input produk -->
 
-							<!--TOMBOL SUBMIT BARCODE -->
-										<button type="submit" class="btn btn-success mater" id="btnBarcode"><i class="material-icons">done</i> Submit Barcode(F2)</button>
+						 {!! Form::open(['url' => route('item-masuk.proses_tambah_edit_tbs_item_masuk', $item_masuk->id),'method' => 'post', 'class'=>'form-inline','id' => 'form-produk']) !!}
+			          <div class="form-group{{ $errors->has('id_produk') ? ' has-error' : '' }}">
+						{!! Form::select('id_produk', []+App\Produk::where('status_aktif','1')->select([DB::raw('CONCAT(kode_produk, " - ", nama_produk) AS data_produk'),'id'])->pluck('data_produk','id')->all(), null, ['class'=>' js-selectize-reguler', 'placeholder' => '--SILAKAN PILIH--', 'id'=>'pilih_produk']) !!}
+								{!! $errors->first('id_produk', '<p class="help-block">:message</p>') !!}
+						
+						</div>
+							{!! Form::hidden('jumlah_produk', null, ['autocomplete'=>'off', 'id'=>'jumlah_produk']) !!}
+								
+							
+      
 
-							<!--TOMBOL CARI PRODUK -->										
-										<button type="button" class="btn btn-info" id="cari_produk" data-toggle="modal" data-target="#modal_produk"><i class="material-icons">search</i> Cari Produk (F1)</button>
-									</div> 
-								{!! Form::close() !!}
+		  			 <button type="submit" class="btn btn-success"><i class="material-icons">done</i> Submit Produk</button>
+		 			{!! Form::close() !!} 
+
+						<!-- / form input produk -->
 						</div>
 						<div class="col-md-2"></div>
 						<div class="col-md-3">
@@ -143,7 +108,87 @@
 
 	<script type="text/javascript">
 		$(document).ready(function(){
-    		$("#kode_barcode").focus();
+    		// initialize the Selectize control
+		var $select = $('#pilih_produk').selectize({
+						 sortField: 'text'
+						});
+		// fetch the instance
+		 $select[0].selectize.focus();
+
+		 $("#form-produk").submit(function(){
+
+		 	var produk = $("#pilih_produk").val();
+		 	var jumlah = $("#jumlah_produk").val();
+		 	if (produk == "") {
+		 		swal('Oops...','Produk Harus Dipilih Dahulu !','error')
+
+		 		return false;
+
+		 	}
+		 	else if(jumlah == ""){
+
+
+
+		 		swal({
+				  title: 'Jumlah Produk',
+				  input: 'number',
+				  inputPlaceholder : 'Jumlah Produk',
+			
+				  type: 'question',
+				  html:'Berapa Jumlah Yang akan di Masukkan?',
+				  animation: false,
+				  showCloseButton: true,
+				  showCancelButton: true,
+				  focusConfirm: true,
+				  confirmButtonText:
+				    '<i class="fa fa-thumbs-up"></i> Submit',
+				  confirmButtonAriaLabel: 'Thumbs up, great!',
+				  cancelButtonText:
+				  'Batal',
+				  closeOnConfirm: true,
+
+				  cancelButtonAriaLabel: 'Thumbs down',
+				    inputValidator : function (value) {
+				    return new Promise(function (resolve, reject) {
+				      if (value) {
+				        resolve()
+				      } else {
+
+				        reject('Jumlah Harus Di isi!')
+				        
+				      }
+				    })
+				  }
+				}).then(function (jumlah) {
+
+					if (jumlah != "0")  {
+						$("#jumlah_produk").val(jumlah);
+
+						$("#form-produk").submit();
+					}
+					else {
+						swal(
+						  'Oops...',
+						  'Jumlah Tidak Boleh 0 !',
+						  'error'
+						)
+
+						return false;
+					}
+					
+				}); //end swal jumlah 
+
+				return false;
+		 	}
+		 	//jika produk dan jumlah sudah di isi maka form di submit
+		 	else if (jumlah != "" && produk != ""){
+		 		return true;
+		 	}
+		 	
+		 }); 
+		 // end btn submit produk click
+
+
 		});
 	</script>
 

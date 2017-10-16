@@ -14,7 +14,7 @@
                        <i class="material-icons">account_circle</i>
                                 </div>
                       <div class="card-content">
-                         <h4 class="card-title"> kas masuk </h4>
+                         <h4 class="card-title"> Item Masuk </h4>
 					
                        <div class="toolbar">
 				

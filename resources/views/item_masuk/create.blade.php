@@ -63,7 +63,6 @@
 				
 				</div>
 
-			
 						{!! Form::hidden('jumlah_produk', null, ['class'=>'form-control','placeholder'=>'Jumlah Produk','required','autocomplete'=>'off', 'id'=>'jumlah_produk']) !!}
 						{!! $errors->first('jumlah_produk', '<p class="help-block" id="eror_jumlah_produk">:message</p>') !!}
 					
@@ -113,21 +112,14 @@
 		$(document).ready(function(){
 
 
-    		// initialize the Selectize control
+    	// initialize the Selectize control
 		var $select = $('#pilih_produk').selectize({
 						 sortField: 'text'
 						});
-
 		// fetch the instance
 		 $select[0].selectize.focus();
-
-
-
-
-			
-
-
-		 $("#form-produk").submit(function(){
+		
+		$("#form-produk").submit(function(){
 
 		 	var produk = $("#pilih_produk").val();
 		 	var jumlah = $("#jumlah_produk").val();
@@ -145,7 +137,7 @@
 				  title: 'Jumlah Produk',
 				  input: 'number',
 				  inputPlaceholder : 'Jumlah Produk',
-				  inputValue : '1',	
+				
 				  type: 'question',
 				  html:'Berapa Jumlah Yang akan di Masukkan?',
 				  animation: false,
