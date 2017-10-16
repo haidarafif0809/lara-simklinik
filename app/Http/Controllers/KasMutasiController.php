@@ -81,6 +81,17 @@ class KasMutasiController extends Controller
             ]);
 
 
+         //tidak boleh melakukan mutasi ke kas yang sama  
+         if ($request->dari_kas == $request->ke_kas) {
+             
+              Session::flash("flash_notification", [
+            "level"=>"danger",
+            "message"=>" <b>GAGAL:</b> Tidak Boleh melakukan mutasi ke Kas yang Sama   "
+            ]);
+            return redirect()->back()->withInput();
+         }
+
+
          $no_faktur = KasMutasi::no_faktur();
  
          $kas = KasMutasi::create(['no_faktur' => $no_faktur,'dari_kas' => $request->dari_kas,'ke_kas' => $request->ke_kas,'jumlah' => $request->jumlah,'keterangan' => $request->keterangan]);
@@ -145,6 +156,18 @@ class KasMutasiController extends Controller
             'keterangan'   => 'max:150', 
             
             ]);
+
+         
+         //tidak boleh melakukan mutasi ke kas yang sama  
+         if ($request->dari_kas == $request->ke_kas) {
+             
+              Session::flash("flash_notification", [
+            "level"=>"danger",
+            "message"=>" <b>GAGAL:</b> Tidak Boleh melakukan mutasi ke Kas yang Sama   "
+            ]);
+            return redirect()->back()->withInput();
+         }
+
          $kas = KasMutasi::find($id)->update(['dari_kas' => $request->dari_kas,'ke_kas' => $request->ke_kas,'jumlah' => $request->jumlah,'keterangan' => $request->keterangan]);
 
          $kas_mutasi = KasMutasi::find($id);
