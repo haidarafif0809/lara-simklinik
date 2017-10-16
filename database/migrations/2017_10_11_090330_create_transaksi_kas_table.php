@@ -20,6 +20,8 @@ class CreateTransaksiKasTable extends Migration
             $table->string('no_faktur');
             $table->float('jumlah_masuk',11,2)->default(0.00);
             $table->float('jumlah_keluar',11,2)->default(0.00);
+            $table->unsignedInteger('created_by')->nullable()->index();            
+            $table->unsignedInteger('updated_by')->nullable()->index();
             $table->timestamps();
         });
     }

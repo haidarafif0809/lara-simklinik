@@ -24,6 +24,9 @@ class CreateProduksTable extends Migration
             $table->integer('harga_jual_1')->default(0);
             $table->integer('harga_jual_2')->default(0);
             $table->integer('harga_jual_3')->default(0);
+            $table->integer('status_aktif')->default(1);
+            $table->unsignedInteger('created_by')->nullable()->index();            
+            $table->unsignedInteger('updated_by')->nullable()->index();
             $table->timestamps();
         });
     }

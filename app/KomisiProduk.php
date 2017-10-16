@@ -3,10 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Yajra\Auditable\AuditableTrait;
+
 
 class KomisiProduk extends Model
 {
     //
+use AuditableTrait;
 
     protected $fillable = ['produk','petugas','prosentase','nominal'];
     protected $primaryKey = 'id_komisi';

@@ -19,6 +19,8 @@ class CreateKomisiProduksTable extends Migration
             $table->integer('produk');
             $table->integer('prosentase')->default(0);
             $table->integer('nominal')->default(0);
+            $table->unsignedInteger('created_by')->nullable()->index();            
+            $table->unsignedInteger('updated_by')->nullable()->index();
             $table->timestamps();
         });
     }

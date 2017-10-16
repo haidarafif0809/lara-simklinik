@@ -19,6 +19,8 @@ class CreatePenjaminsTable extends Migration
             $table->string('no_telp_penjamin')->nullable();
             $table->string('alamat_penjamin')->nullable();
             $table->integer('level_harga');
+            $table->unsignedInteger('created_by')->nullable()->index();            
+            $table->unsignedInteger('updated_by')->nullable()->index();
             $table->timestamps();
         });
     }

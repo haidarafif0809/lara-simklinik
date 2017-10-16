@@ -16,6 +16,8 @@ class CreateGudangsTable extends Migration
         Schema::create('gudangs', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama_gudang')->unique();
+            $table->unsignedInteger('created_by')->nullable()->index();            
+            $table->unsignedInteger('updated_by')->nullable()->index();
             $table->timestamps();
         });
     }

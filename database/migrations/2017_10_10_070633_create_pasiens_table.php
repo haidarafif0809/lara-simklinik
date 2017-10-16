@@ -19,6 +19,8 @@ class CreatePasiensTable extends Migration
             $table->string('alamat_pasien')->nullable();
             $table->string('no_telp_pasien')->nullable();
             $table->string('jenis_kelamin');
+            $table->unsignedInteger('created_by')->nullable()->index();            
+            $table->unsignedInteger('updated_by')->nullable()->index();
             $table->timestamps();
         });
     }

@@ -16,6 +16,8 @@ class CreatePolisTable extends Migration
         Schema::create('polis', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama_poli')->unique();
+            $table->unsignedInteger('created_by')->nullable()->index();            
+            $table->unsignedInteger('updated_by')->nullable()->index();
             $table->timestamps();
         });
     }

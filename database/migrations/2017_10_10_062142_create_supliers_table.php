@@ -18,6 +18,8 @@ class CreateSupliersTable extends Migration
             $table->string('nama_suplier')->unique();
             $table->text('alamat_suplier')->nullable();
             $table->string('no_telp_suplier')->nullable();
+            $table->unsignedInteger('created_by')->nullable()->index();            
+            $table->unsignedInteger('updated_by')->nullable()->index();
             $table->timestamps();
         });
     }

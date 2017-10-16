@@ -17,6 +17,8 @@ class CreateKasTable extends Migration
             $table->increments('id');
             $table->string('kode_kas')->unique();
             $table->string('nama_kas')->unique();
+            $table->unsignedInteger('created_by')->nullable()->index();            
+            $table->unsignedInteger('updated_by')->nullable()->index();
             $table->timestamps();
         });
     }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0823d08edc09c67588d7f8bb272f4258",
+    "content-hash": "6a5b606a3a5c1e7f8893b8f8f3e3924a",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -2634,6 +2634,62 @@
             "time": "2016-09-01T10:05:43+00:00"
         },
         {
+            "name": "yajra/laravel-auditable",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yajra/laravel-auditable.git",
+                "reference": "511de9dca5d447a2e3b8edcd96dbcf32bad4af60"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yajra/laravel-auditable/zipball/511de9dca5d447a2e3b8edcd96dbcf32bad4af60",
+                "reference": "511de9dca5d447a2e3b8edcd96dbcf32bad4af60",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "5.*",
+                "illuminate/support": "5.*",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*",
+                "scrutinizer/ocular": "~1.1",
+                "squizlabs/php_codesniffer": "~2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Yajra\\Auditable\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arjay Angeles",
+                    "email": "aqangeles@gmail.com",
+                    "homepage": "http://yajrabox.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple Laravel user auditing package for Eloquent Model.",
+            "homepage": "https://github.com/yajra/laravel-auditable",
+            "keywords": [
+                "Auditable",
+                "laravel",
+                "yajra"
+            ],
+            "time": "2017-06-09T08:10:53+00:00"
+        },
+        {
             "name": "yajra/laravel-datatables-buttons",
             "version": "v3.0.1",
             "source": {
@@ -2699,16 +2755,16 @@
         },
         {
             "name": "yajra/laravel-datatables-html",
-            "version": "v3.1.0",
+            "version": "v3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yajra/laravel-datatables-html.git",
-                "reference": "954598fe71810865d5865eff40301de6c7e5dbf8"
+                "reference": "25d8295504a6488f079cc5518035e614ed7ee51d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/laravel-datatables-html/zipball/954598fe71810865d5865eff40301de6c7e5dbf8",
-                "reference": "954598fe71810865d5865eff40301de6c7e5dbf8",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables-html/zipball/25d8295504a6488f079cc5518035e614ed7ee51d",
+                "reference": "25d8295504a6488f079cc5518035e614ed7ee51d",
                 "shasum": ""
             },
             "require": {
@@ -2754,7 +2810,7 @@
                 "jquery",
                 "laravel"
             ],
-            "time": "2017-09-14T08:47:42+00:00"
+            "time": "2017-10-13T01:06:29+00:00"
         },
         {
             "name": "yajra/laravel-datatables-oracle",

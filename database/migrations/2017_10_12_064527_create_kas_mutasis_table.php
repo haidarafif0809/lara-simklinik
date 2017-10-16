@@ -20,6 +20,8 @@ class CreateKasMutasisTable extends Migration
             $table->integer('ke_kas');
             $table->float('jumlah',11,2)->default(0.00);
             $table->text('keterangan')->nullable();
+            $table->unsignedInteger('created_by')->nullable()->index();            
+            $table->unsignedInteger('updated_by')->nullable()->index();
             $table->timestamps();
         });
     }

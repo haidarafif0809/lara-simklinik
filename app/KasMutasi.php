@@ -5,11 +5,13 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB; 
 
+use Yajra\Auditable\AuditableTrait;
 
 class KasMutasi extends Model
 {
     //
 
+use AuditableTrait;
      protected $fillable = ['no_faktur','dari_kas','ke_kas','kategori','jumlah','keterangan' ];
 
 
