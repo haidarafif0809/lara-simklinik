@@ -18,7 +18,7 @@ class CreateHppsTable extends Migration
             $table->string('no_faktur');
             $table->string('no_faktur_hpp_masuk')->nullable();
             $table->string('no_faktur_hpp_keluar')->nullable();
-            $table->integer('id_barang');
+            $table->integer('id_produk');
             $table->string('jenis_transaksi');
             $table->float('jumlah_masuk',11,2)->default(0.00);
             $table->float('jumlah_keluar',11,2)->default(0.00);

@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Session;
 use Yajra\Auditable\AuditableTrait;
 
+
 class Produk extends Model
 {
     //

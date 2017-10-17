@@ -128,6 +128,12 @@
                                         <span class="sidebar-mini">IM</span>
                                         <span class="sidebar-normal">Item Masuk</span>
                                     </a>
+                                </li>  
+                                <li>
+                                    <a href="{{ route('item-keluar.index') }}">
+                                        <span class="sidebar-mini">IK</span>
+                                        <span class="sidebar-normal">Item Keluar</span>
+                                    </a>
                                 </li> 
                             </ul>
                         </div>
@@ -345,7 +351,7 @@
 <script type="text/javascript">
     $(document).ready(function() {
 
-        // $.fn.dataTable.ext.errMode = 'throw';
+         $.fn.dataTable.ext.errMode = 'throw';
     });
 </script>
 

@@ -84,7 +84,7 @@ class ItemMasukController extends Controller
     { 
         $this->validate($request, [
             'id_produk'     => 'required|max:11|numeric',
-            'jumlah_produk' => 'required|max:8|numeric',
+            'jumlah_produk' => 'required|digits_between:1,15|numeric',
             ]);
 
         $session_id = session()->getId();
