@@ -12,7 +12,7 @@ class Produk extends Model
 
   use AuditableTrait;
 
-    protected $fillable = ['kode_produk','nama_produk','kategori','tipe_produk','harga_beli','harga_jual_1','harga_jual_2','harga_jual_3','satuan','status_aktif'];
+    protected $fillable = ['kode_produk','nama_produk','kategori','tipe_produk','harga_beli','harga_jual_1','harga_jual_2','harga_jual_3','satuan','status_aktif','over_stok','limit_stok'];
 
 
 
@@ -24,18 +24,7 @@ class Produk extends Model
    	}
 
 
-     public function getTipeProdukAttribute($tipe_produk)
-	 {    
-
-			  	if ($tipe_produk == 1) {
-			  		return $this->attributes['tipe_produk'] = 'Barang';
-			  	}
-			  	else {
-
-			       return $this->attributes['tipe_produk'] = 'Jasa';
-			  	}
-	 }
-
+     
 
            //MODEL EVENT 
   public static function boot() {

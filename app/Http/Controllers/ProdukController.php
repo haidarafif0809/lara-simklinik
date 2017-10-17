@@ -37,7 +37,7 @@ class ProdukController extends Controller
         $html = $htmlBuilder
         ->addColumn(['data' => 'kode_produk', 'name' => 'kode_produk', 'title' => 'Kode'])
         ->addColumn(['data' => 'nama_produk', 'name' => 'nama_produk', 'title' => 'Nama'])
-        ->addColumn(['data' => 'tipe_produk', 'name' => 'tipe_produk', 'title' => 'Tipe '])   
+     
         ->addColumn(['data' => 'kategori.nama_kategori', 'name' => 'kategori', 'title' => 'Tipe Kategori']) 
         ->addColumn(['data' => 'harga_beli', 'name' => 'harga_beli', 'title' => 'Harga Beli']) 
         ->addColumn(['data' => 'harga_jual_1', 'name' => 'harga_jual_1', 'title' => 'Harga Jual 1']) 
