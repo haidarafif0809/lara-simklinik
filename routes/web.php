@@ -25,6 +25,7 @@ Route::group(['middleware' =>'auth'], function(){
 	Route::resource('kas', 'KasController');
 	Route::resource('item-masuk', 'ItemMasukController');
 	Route::resource('item-keluar', 'ItemKeluarController');
+	Route::resource('pembelian', 'PembelianController');
 	Route::resource('kas_masuk', 'KasMasukController');
 	Route::resource('kas_keluar', 'KasKeluarController');
 	Route::resource('kas_mutasi', 'KasMutasiController');
@@ -143,6 +144,68 @@ Route::group(['middleware' =>'auth'], function(){
 	'as' => 'item-masuk.proses_edit_item_masuk',
 	'uses' => 'ItemMasukController@proses_edit_item_masuk'
 	]);
+
+//pembelian 
+	Route::get('/pembelian/proses-form-edit/{id}',[
+	'middleware' => ['auth'],
+	'as' => 'pembelian.proses_form_edit',
+	'uses' => 'PembelianController@proses_form_edit'
+	]);
+
+	Route::post('/pembelian/proses-tambah-tbs-pembelian',[
+	'middleware' => ['auth'],
+	'as' => 'pembelian.proses_tambah_tbs_pembelian',
+	'uses' => 'PembelianController@proses_tambah_tbs_pembelian'
+	]);
+
+	Route::post('/pembelian/edit-harga',[
+	'middleware' => ['auth'],
+	'as' => 'pembelian.edit_harga',
+	'uses' => 'PembelianController@proses_edit_harga'
+	]);	
+	Route::post('/pembelian/edit-jumlah',[
+	'middleware' => ['auth'],
+	'as' => 'pembelian.edit_jumlah',
+	'uses' => 'PembelianController@proses_edit_jumlah'
+	]);
+
+	Route::post('/pembelian/proses-tambah-edit-tbs-pembelian/{id}',[
+	'middleware' => ['auth'],
+	'as' => 'pembelian.proses_tambah_edit_tbs_pembelian',
+	'uses' => 'PembelianController@proses_tambah_edit_tbs_pembelian'
+	]);
+
+	Route::post('/pembelian/proses-hapus-tbs-pembelian/{id}',[
+	'middleware' => ['auth'],
+	'as' => 'pembelian.proses_hapus_tbs_pembelian',
+	'uses' => 'PembelianController@proses_hapus_tbs_pembelian'
+	]);
+
+	Route::post('/pembelian/proses-hapus-edit-tbs-pembelian/{id}',[
+	'middleware' => ['auth'],
+	'as' => 'pembelian.proses_hapus_edit_tbs_pembelian',
+	'uses' => 'PembelianController@proses_hapus_edit_tbs_pembelian'
+	]);
+
+	Route::post('/pembelian/proses-hapus-semua-tbs-pembelian/',[
+	'middleware' => ['auth'],
+	'as' => 'pembelian.proses_hapus_semua_tbs_pembelian',
+	'uses' => 'PembelianController@proses_hapus_semua_tbs_pembelian'
+	]);
+
+	Route::post('/pembelian/proses-hapus-semua-edit-tbs-pembelian/{id}',[
+	'middleware' => ['auth'],
+	'as' => 'pembelian.proses_hapus_semua_edit_tbs_pembelian',
+	'uses' => 'PembelianController@proses_hapus_semua_edit_tbs_pembelian'
+	]);
+
+	Route::post('/pembelian/proses-edit-pembelian/{id}',[
+	'middleware' => ['auth'],
+	'as' => 'pembelian.proses_edit_pembelian',
+	'uses' => 'PembelianController@proses_edit_pembelian'
+	]);
+
+//end pembelian
 
 
 

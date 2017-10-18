@@ -82,6 +82,13 @@
                         </a>
                     </li>
 
+                    <li class="">
+                        <a href="{{ route('pembelian.index')}}">
+                            <i class="material-icons">dollar</i>
+                            <p>Pembelian</p>
+                        </a>
+                    </li>
+
                     <li>
                         <a data-toggle="collapse" href="#transaksiKas">
                             <i class="material-icons">image</i>
@@ -351,7 +358,7 @@
 <script type="text/javascript">
     $(document).ready(function() {
 
-         $.fn.dataTable.ext.errMode = 'throw';
+        // $.fn.dataTable.ext.errMode = 'throw';
     });
 </script>
 
