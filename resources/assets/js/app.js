@@ -38,14 +38,22 @@ import DashboardIndex from './components/dashboard/Dashboard.vue';
  import UserCreate from './components/user/UserCreate.vue'
  import UserEdit from './components/user/UserEdit.vue'*/
 
+ // Master Data Poli
+ import PoliIndex from './components/user/PoliIndex.vue'
+ import PoliCreate from './components/user/PoliCreate.vue'
+ import PoliEdit from './components/user/PoliEdit.vue'
+
  const routes = [
  {
  	path: '/',
  	components: {
- 		dashboardIndex:DashboardIndex
+ 		dashboardIndex: DashboardIndex
  	},
  	name : 'indexDashboard'
- }
+ },
+ { path: '/poli', component: PoliIndex, name: 'indexPoli' },
+ { path: '/poli/create', component: PoliCreate, name: 'createPoli' },
+ { path: '/poli/edit/:id', component: PoliEdit, name: 'editPoli' },
  /*{
  	path: '/mahasiswa',component:MahasiswaIndex,name:'indexMahasiswa' 
  },
