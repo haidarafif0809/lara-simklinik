@@ -19028,7 +19028,7 @@ var PopOver = function (_ToolTip) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(59);
-module.exports = __webpack_require__(249);
+module.exports = __webpack_require__(250);
 
 
 /***/ }),
@@ -19045,8 +19045,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_bootstrap_vue__ = __webpack_require__(90);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_bootstrap_vue_dist_bootstrap_vue_css__ = __webpack_require__(243);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_bootstrap_vue_dist_bootstrap_vue_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_bootstrap_vue_dist_bootstrap_vue_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_dashboard_Dashboard_vue__ = __webpack_require__(257);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_dashboard_Dashboard_vue__ = __webpack_require__(248);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_dashboard_Dashboard_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_dashboard_Dashboard_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_poli_PoliIndex_vue__ = __webpack_require__(257);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_poli_PoliIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__components_poli_PoliIndex_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_poli_PoliCreate_vue__ = __webpack_require__(260);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_poli_PoliCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__components_poli_PoliCreate_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_poli_PoliEdit_vue__ = __webpack_require__(261);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_poli_PoliEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__components_poli_PoliEdit_vue__);
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -19086,34 +19092,18 @@ import UserIndex from './components/user/UserIndex.vue'
 import UserCreate from './components/user/UserCreate.vue'
 import UserEdit from './components/user/UserEdit.vue'*/
 
+// Master Data Poli
+
+
+
+
 var routes = [{
   path: '/',
   components: {
     dashboardIndex: __WEBPACK_IMPORTED_MODULE_5__components_dashboard_Dashboard_vue___default.a
   },
   name: 'indexDashboard'
-  /*{
-  	path: '/mahasiswa',component:MahasiswaIndex,name:'indexMahasiswa' 
-  },
-  
-  {
-  	path: '/mahasiswa/create',component:MahasiswaCreate,name:'createMahasiswa' 
-  },
-  {
-  	path: '/mahasiswa/edit/:id',component:MahasiswaEdit,name:'editMahasiswa' 
-  },
-  {
-  	path: '/user',component:UserIndex,name:'indexUser' 
-  },
-  
-  {
-  	path: '/user/create',component:UserCreate,name:'createUser'
-  },
-  {
-  	path: '/user/edit/:id',component:UserEdit,name:'editUser'
-  }*/
-
-}];
+}, { path: '/poli', component: __WEBPACK_IMPORTED_MODULE_6__components_poli_PoliIndex_vue___default.a, name: 'indexPoli' }, { path: '/poli/create', component: __WEBPACK_IMPORTED_MODULE_7__components_poli_PoliCreate_vue___default.a, name: 'createPoli' }, { path: '/poli/edit/:id', component: __WEBPACK_IMPORTED_MODULE_8__components_poli_PoliEdit_vue___default.a, name: 'editPoli' }];
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -67025,21 +67015,7 @@ module.exports = {
 
 
 /***/ }),
-/* 248 */,
-/* 249 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 250 */,
-/* 251 */,
-/* 252 */,
-/* 253 */,
-/* 254 */,
-/* 255 */,
-/* 256 */,
-/* 257 */
+/* 248 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
@@ -67047,7 +67023,7 @@ var normalizeComponent = __webpack_require__(8)
 /* script */
 var __vue_script__ = null
 /* template */
-var __vue_template__ = __webpack_require__(258)
+var __vue_template__ = __webpack_require__(249)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -67087,7 +67063,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 258 */
+/* 249 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -67124,6 +67100,427 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-5f08dab6", module.exports)
   }
 }
+
+/***/ }),
+/* 250 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 251 */,
+/* 252 */,
+/* 253 */,
+/* 254 */,
+/* 255 */,
+/* 256 */,
+/* 257 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(8)
+/* script */
+var __vue_script__ = __webpack_require__(258)
+/* template */
+var __vue_template__ = __webpack_require__(259)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\poli\\PoliIndex.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-2beab64d", Component.options)
+  } else {
+    hotAPI.reload("data-v-2beab64d", Component.options)
+' + '  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 258 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      animes: [],
+      animesData: {},
+      pencarian: "",
+      url: window.location.origin + window.location.pathname.replace("home", "anime"),
+      loading: true
+    };
+  },
+  watch: {
+    pencarian: function pencarian(newQuestion) {
+      this.searchData();
+    }
+  },
+  mounted: function mounted() {
+    var app = this;
+    app.getAnimes();
+  },
+
+  methods: {
+    getAnimes: function getAnimes(page) {
+      var app = this;
+      if (typeof page === 'undefined') {
+        page = 1;
+      }
+
+      axios.get(app.url + '/view?page=' + page).then(function (resp) {
+        app.animes = resp.data.data;
+        app.animesData = resp.data;
+        app.loading = false;
+      }).catch(function (resp) {
+        alert("Could not load satuans");
+        app.loading = false;
+      });
+    },
+    searchData: function searchData(page) {
+      var app = this;
+      app.loading = true;
+      if (typeof page === 'undefined') {
+        page = 1;
+      }
+
+      axios.get(app.url + '/cari?pencarian=' + app.pencarian + '&page=' + page).then(function (resp) {
+        app.animes = resp.data.data;
+        app.animesData = resp.data;
+        app.loading = false;
+      }).catch(function (resp) {
+        alert("Tidak dapat memuat satuan..");
+        app.loading = false;
+      });
+    },
+    deleteEntry: function deleteEntry(id, index, judul) {
+      if (confirm("Yakin Ingin Menghapus satuan " + judul + " ?")) {
+        var app = this;
+        axios.delete(app.url + '/' + id).then(function (resp) {
+          app.getAnimes();
+          app.alert("Berhasil Menghapus satuan " + judul);
+        }).catch(function (resp) {
+          alert("Tidak dapat menghapus satuan!");
+        });
+      }
+    },
+    alert: function alert(pesan) {
+      this.$swal({
+        title: "Berhasil!",
+        text: pesan,
+        icon: "success"
+      });
+    }
+  }
+});
+
+/***/ }),
+/* 259 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "panel panel-default" }, [
+    _c("div", { staticClass: "panel-heading" }, [_vm._v("Dashboard")]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "panel-body" },
+      [
+        _c(
+          "p",
+          [
+            _c(
+              "router-link",
+              {
+                staticClass: "btn btn-primary",
+                attrs: { to: { name: "createAnime" } }
+              },
+              [_vm._v("Tambah Anime")]
+            )
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "table table-responsive" }, [
+          _c("div", { staticClass: "pencarian" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.pencarian,
+                  expression: "pencarian"
+                }
+              ],
+              staticClass: "efek",
+              attrs: {
+                type: "text",
+                name: "pencarian",
+                placeholder: "Pencarian.."
+              },
+              domProps: { value: _vm.pencarian },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.pencarian = $event.target.value
+                }
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("table", { staticClass: "table table-striped" }, [
+            _vm._m(0, false, false),
+            _vm._v(" "),
+            _vm.animes.length > 0 && _vm.loading == false
+              ? _c(
+                  "tbody",
+                  { staticClass: "data-ada" },
+                  _vm._l(_vm.animes, function(anime, index) {
+                    return _c("tr", [
+                      _c("td", [_vm._v(_vm._s(anime.judul))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(anime.genre))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(anime.created_at))]),
+                      _vm._v(" "),
+                      _c(
+                        "td",
+                        [
+                          _c(
+                            "router-link",
+                            {
+                              staticClass: "btn btn-xs btn-default",
+                              attrs: {
+                                to: {
+                                  name: "editAnime",
+                                  params: { id: anime.id }
+                                },
+                                id: "edit-" + anime.id
+                              }
+                            },
+                            [_vm._v("\n              Edit \n            ")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass: "btn btn-xs btn-danger",
+                              attrs: { href: "#", id: "delete-" + anime.id },
+                              on: {
+                                click: function($event) {
+                                  _vm.deleteEntry(anime.id, index, anime.judul)
+                                }
+                              }
+                            },
+                            [_vm._v("\n              Hapus\n            ")]
+                          )
+                        ],
+                        1
+                      )
+                    ])
+                  })
+                )
+              : _c("tbody", { staticClass: "data-tidak-ada" }, [
+                  _vm._m(1, false, false)
+                ])
+          ])
+        ]),
+        _vm._v(" "),
+        _vm.loading ? _c("vue-simple-spinner") : _vm._e(),
+        _vm._v(" "),
+        _c(
+          "div",
+          { attrs: { align: "right" } },
+          [
+            _c("pagination", {
+              attrs: { data: _vm.animesData },
+              on: { "pagination-change-page": _vm.getAnimes }
+            })
+          ],
+          1
+        )
+      ],
+      1
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("th", [_vm._v("Judul Anime")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Genre")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Waktu")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Aksi")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("td", { staticClass: "text-center", attrs: { colspan: "2" } }, [
+        _vm._v("Tidak Ada Data")
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-2beab64d", module.exports)
+  }
+}
+
+/***/ }),
+/* 260 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var normalizeComponent = __webpack_require__(8)
+/* script */
+var __vue_script__ = null
+/* template */
+var __vue_template__ = null
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\poli\\PoliCreate.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 261 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var normalizeComponent = __webpack_require__(8)
+/* script */
+var __vue_script__ = null
+/* template */
+var __vue_template__ = null
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\poli\\PoliEdit.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
+
+module.exports = Component.exports
+
 
 /***/ })
 /******/ ]);

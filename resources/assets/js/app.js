@@ -39,9 +39,9 @@ import DashboardIndex from './components/dashboard/Dashboard.vue';
  import UserEdit from './components/user/UserEdit.vue'*/
 
  // Master Data Poli
- import PoliIndex from './components/user/PoliIndex.vue'
- import PoliCreate from './components/user/PoliCreate.vue'
- import PoliEdit from './components/user/PoliEdit.vue'
+ import PoliIndex from './components/poli/PoliIndex.vue'
+ import PoliCreate from './components/poli/PoliCreate.vue'
+ import PoliEdit from './components/poli/PoliEdit.vue'
 
  const routes = [
  {
