@@ -3,7 +3,7 @@
     <div class="panel-heading">Dashboard</div>
 
     <div class="panel-body">
-      <p> <router-link :to="{name: 'createAnime'}" class="btn btn-primary">Tambah Anime</router-link></p>
+      <p> <router-link :to="{name: 'createPoli'}" class="btn btn-primary"><i class="material-icons">add</i>Tambah Poli</router-link></p>
       <div class="table table-responsive">
         <div class="pencarian">
           <input class="efek" type="text" name="pencarian" v-model="pencarian" placeholder="Pencarian..">

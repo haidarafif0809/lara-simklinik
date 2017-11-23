@@ -67312,9 +67312,12 @@ var render = function() {
               "router-link",
               {
                 staticClass: "btn btn-primary",
-                attrs: { to: { name: "createAnime" } }
+                attrs: { to: { name: "createPoli" } }
               },
-              [_vm._v("Tambah Anime")]
+              [
+                _c("i", { staticClass: "material-icons" }, [_vm._v("add")]),
+                _vm._v("Tambah Poli")
+              ]
             )
           ],
           1

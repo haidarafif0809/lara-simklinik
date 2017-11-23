@@ -187,10 +187,10 @@
             </a>
         </li> 
         <li>
-            <a href="{{ route('poli.index') }}">
+            <router-link :to="{name: 'createPoli'}">
                 <span class="sidebar-mini">P</span>
                 <span class="sidebar-normal">Poli</span>
-            </a>
+            </router-link>
         </li>
         <li>
             <a href="{{ route('suplier.index') }}">
