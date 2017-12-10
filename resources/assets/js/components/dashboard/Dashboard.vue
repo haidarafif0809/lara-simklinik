@@ -6,7 +6,7 @@
                     <div class="panel-heading">Dashboard</div>
 
                     <div class="panel-body">
-                        Mas anwar
+                     SIM Lara
                     </div>
                 </div>
             </div>

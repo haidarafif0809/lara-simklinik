@@ -2,12 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
-use Yajra\DataTables\Html\Builder;
-use Yajra\DataTables\Datatables;
 use App\Poli;
-use Session;
+use Illuminate\Http\Request;
 
 class PoliController extends Controller
 {
@@ -16,34 +12,12 @@ class PoliController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-   public function index(Request $request, Builder $htmlBuilder)
+    public function index(Request $request)
     {
-        //
 
-
-         if ($request->ajax()) {
-            # code...
-            $poli = Poli::all();
-            return Datatables::of($poli)
-         ->addColumn('action', function($master_poli){
-                    return view('poli._action', [
-                        'model'     => $master_poli,
-                        'form_url'  => route('poli.destroy', $master_poli->id),
-                        'edit_url'  => route('poli.edit', $master_poli->id),
-                        'confirm_message'   => 'Yakin Mau Menghapus poli ' . $master_poli->name . '?'
-                   
-                        ]); 
-                })->make(true);
-        }
-        $html = $htmlBuilder
-        ->addColumn(['data' => 'nama_poli', 'name' => 'nama_poli', 'title' => 'Nama'])
-        ->addColumn(['data' => 'action', 'name' => 'action', 'title' => 'Aksi', 'orderable' => false, 'searchable'=>false]);
-
-        return view('poli.index')->with(compact('html'));
-
+        return Poli::paginate(10);
 
     }
-
 
     /**
      * Show the form for creating a new resource.
@@ -54,7 +28,7 @@ class PoliController extends Controller
     {
         //
 
-               return view ('poli.create');
+        return view('poli.create');
     }
 
     /**
@@ -67,22 +41,15 @@ class PoliController extends Controller
     {
         //
 
-            // // proses tambah user
-         $this->validate($request, [
-            'nama_poli'   => 'required|unique:polis,nama_poli',
-           
-            
-            ]);
+        // // proses tambah user
+        $this->validate($request, [
+            'nama_poli' => 'required|unique:polis,nama_poli',
 
-         $poli = Poli::create([ 
-            'nama_poli' =>$request->nama_poli]);
+        ]);
 
-        Session::flash("flash_notification", [
-            "level"=>"success",
-            "message"=>" <b>BERHASIL:</b> Menambah Poli <b>$request->nama_poli </b>"
-            ]);
-
-        return redirect()->route('poli.index');
+        $poli = Poli::create([
+            'nama_poli' => $request->nama_poli]);
+        return $poli;
     }
 
     /**
@@ -94,6 +61,8 @@ class PoliController extends Controller
     public function show($id)
     {
         //
+
+        return Poli::find($id);
     }
 
     /**
@@ -106,8 +75,7 @@ class PoliController extends Controller
     {
         //
 
-         $poli = Poli::find($id);
-       
+        $poli = Poli::find($id);
 
         return view('poli.edit')->with(compact('poli'));
     }
@@ -123,27 +91,22 @@ class PoliController extends Controller
     {
         //
 
+        $this->validate($request, [
 
-         $this->validate($request, [
-          
-            'nama_poli'     => 'required|unique:polis,nama_poli,'.$id, 
-          
-            ]);
+            'nama_poli' => 'required|unique:polis,nama_poli,' . $id,
 
-         // update user
-         $poli = Poli::find($id)->update([
-                'nama_poli'  => $request->nama_poli
-            ]);
+        ]);
 
- 
-    
+        $poli = Poli::find($id)->update([
+            'nama_poli' => $request->nama_poli,
+        ]);
 
-         Session::flash("flash_notification", [
-            "level"=>"success",
-            "message"=>"BERHASIL:</b> Mengubah poli $request->nama_poli"
-            ]);
+        if ($poli) {
+            return response(200);
+        } else {
+            return response(500);
+        }
 
-        return redirect()->route('poli.index');
     }
 
     /**
@@ -154,21 +117,13 @@ class PoliController extends Controller
      */
     public function destroy($id)
     {
-        //
-            // hapus 
-        $poli = Poli::find($id);
-  
 
         // jika gagal hapus
         if (!Poli::destroy($id)) {
-            // redirect back
-            return redirect()->back();
-        }else{
-            Session::flash("flash_notification", [
-                "level"     => "success",
-                "message"   => "Poli ". $poli->nama_poli ." Berhasil Di Hapus"
-            ]);
-        return redirect()->route('poli.index');
+            return response(500);
+        } else {
+
+            return response(200);
         }
     }
 }
