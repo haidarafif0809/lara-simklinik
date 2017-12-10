@@ -12,6 +12,12 @@ import DashboardIndex from './components/dashboard/Dashboard.vue';
  import SuplierCreate from './components/suplier/SuplierCreate.vue'
  import SuplierEdit from './components/suplier/SuplierEdit.vue'
 
+ // master data satuan
+
+ import SatuanIndex from './components/satuan/SatuanIndex.vue'
+ import SatuanCreate from './components/satuan/SatuanCreate.vue'
+ import SatuanEdit from './components/satuan/SatuanEdit.vue'
+
  const routes = [
  {
  	path: '/',
@@ -25,7 +31,10 @@ import DashboardIndex from './components/dashboard/Dashboard.vue';
  { path: '/suplier/:id/edit', component: SuplierEdit, name: 'editSuplier' },
  { path: '/poli', component: PoliIndex, name: 'indexPoli' },
  { path: '/poli/create', component: PoliCreate, name: 'createPoli' },
- { path: '/poli/:id/edit', component: PoliEdit, name: 'editPoli' }
+ { path: '/poli/:id/edit', component: PoliEdit, name: 'editPoli' },
+ { path: '/satuan', component: SatuanIndex, name: 'indexSatuan' },
+ { path: '/satuan/create', component: SatuanCreate, name: 'createSatuan' },
+ { path: '/satuan/:id/edit', component: SatuanEdit, name: 'editSatuan' }
  ]
 
  export default routes;

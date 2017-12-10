@@ -204,14 +204,14 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('satuan.index') }}">
+                                        <router-link :to="{name: 'indexSatuan'}">
                                             <span class="sidebar-mini">
                                                 S
                                             </span>
                                             <span class="sidebar-normal">
                                                 Satuan
                                             </span>
-                                        </a>
+                                        </router-link>
                                     </li>
                                     <li>
                                         <a href="{{ route('kategori.index') }}">

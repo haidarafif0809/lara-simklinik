@@ -2,12 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Yajra\DataTables\Html\Builder;
-use Yajra\DataTables\Datatables;
 use App\Satuan;
+use Illuminate\Http\Request;
 use Session;
-
 
 class SatuanController extends Controller
 {
@@ -16,34 +13,11 @@ class SatuanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request, Builder $htmlBuilder)
+    public function index(Request $request)
     {
         //
-
-
-         if ($request->ajax()) {
-            # code...
-            $satuan = Satuan::all();
-            return Datatables::of($satuan)
-         ->addColumn('action', function($master_satuan){
-                    return view('satuan._action', [
-                        'model'     => $master_satuan,
-                        'form_url'  => route('satuan.destroy', $master_satuan->id),
-                        'edit_url'  => route('satuan.edit', $master_satuan->id),
-                        'confirm_message'   => 'Yakin Mau Menghapus satuan ' . $master_satuan->name . '?'
-                   
-                        ]); 
-                })->make(true);
-        }
-        $html = $htmlBuilder
-        ->addColumn(['data' => 'nama_satuan', 'name' => 'nama_satuan', 'title' => 'Nama'])
-        ->addColumn(['data' => 'action', 'name' => 'action', 'title' => 'Aksi', 'orderable' => false, 'searchable'=>false]);
-
-        return view('satuan.index')->with(compact('html'));
-
-
+        return $satuan = Satuan::paginate(10);
     }
-
 
     /**
      * Show the form for creating a new resource.
@@ -54,7 +28,7 @@ class SatuanController extends Controller
     {
         //
 
-        return view ('satuan.create');
+        return view('satuan.create');
     }
 
     /**
@@ -67,20 +41,19 @@ class SatuanController extends Controller
     {
         //
 
-          // // proses tambah user
-         $this->validate($request, [
-            'nama_satuan'   => 'required|unique:satuans,nama_satuan',
-           
-            
-            ]);
+        // // proses tambah user
+        $this->validate($request, [
+            'nama_satuan' => 'required|unique:satuans,nama_satuan',
 
-         $user_baru = Satuan::create([ 
-            'nama_satuan' =>$request->nama_satuan]);
+        ]);
+
+        $user_baru = Satuan::create([
+            'nama_satuan' => $request->nama_satuan]);
 
         Session::flash("flash_notification", [
-            "level"=>"success",
-            "message"=>" <b>BERHASIL:</b> Menambah Satuan <b>$request->nama_satuan </b>"
-            ]);
+            "level"   => "success",
+            "message" => " <b>BERHASIL:</b> Menambah Satuan <b>$request->nama_satuan </b>",
+        ]);
 
         return redirect()->route('satuan.index');
     }
@@ -94,6 +67,7 @@ class SatuanController extends Controller
     public function show($id)
     {
         //
+        return $satuan = Satuan::find($id);
     }
 
     /**
@@ -105,8 +79,7 @@ class SatuanController extends Controller
     public function edit($id)
     {
         //
-          $satuan = Satuan::find($id);
-       
+        $satuan = Satuan::find($id);
 
         return view('satuan.edit')->with(compact('satuan'));
     }
@@ -122,27 +95,22 @@ class SatuanController extends Controller
     {
         //
 
+        $this->validate($request, [
 
-         $this->validate($request, [
-          
-            'nama_satuan'     => 'required|unique:satuans,nama_satuan,'.$id, 
-          
-            ]);
+            'nama_satuan' => 'required|unique:satuans,nama_satuan,' . $id,
 
-         // update user
-         $satuan = Satuan::find($id)->update([
-                'nama_satuan'  => $request->nama_satuan
-            ]);
+        ]);
 
- 
-    
+        // update user
+        $satuan = Satuan::find($id)->update([
+            'nama_satuan' => $request->nama_satuan,
+        ]);
 
-         Session::flash("flash_notification", [
-            "level"=>"success",
-            "message"=>"BERHASIL:</b> Mengubah Satuan $request->nama_satuan"
-            ]);
-
-        return redirect()->route('satuan.index');
+        if ($satuan) {
+            return response(200);
+        } else {
+            return response(500);
+        }
     }
 
     /**
@@ -153,23 +121,13 @@ class SatuanController extends Controller
      */
     public function destroy($id)
     {
-        //
-
-          // hapus 
-        $satuan = Satuan::find($id);
-  
 
         // jika gagal hapus
         if (!Satuan::destroy($id)) {
-            // redirect back
-            return redirect()->back();
-        }else{
-            Session::flash("flash_notification", [
-                "level"     => "success",
-                "message"   => "Satuan ". $satuan->nama_satuan ." Berhasil Di Hapus"
-            ]);
-        return redirect()->route('satuan.index');
-    }
+            return response(500);
+        } else {
+            return response(200);
+        }
 
     }
 }
