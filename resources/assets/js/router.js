@@ -17,6 +17,11 @@ import DashboardIndex from './components/dashboard/Dashboard.vue';
  import SatuanIndex from './components/satuan/SatuanIndex.vue'
  import SatuanCreate from './components/satuan/SatuanCreate.vue'
  import SatuanEdit from './components/satuan/SatuanEdit.vue'
+ // master data kategori produk
+
+ import KategoriProdukIndex from './components/kategori_produk/KategoriProdukIndex.vue'
+ import KategoriProdukCreate from './components/kategori_produk/KategoriProdukCreate.vue'
+ import KategoriProdukEdit from './components/kategori_produk/KategoriProdukEdit.vue'
 
  const routes = [
  {
@@ -35,6 +40,10 @@ import DashboardIndex from './components/dashboard/Dashboard.vue';
  { path: '/satuan', component: SatuanIndex, name: 'indexSatuan' },
  { path: '/satuan/create', component: SatuanCreate, name: 'createSatuan' },
  { path: '/satuan/:id/edit', component: SatuanEdit, name: 'editSatuan' }
+ ,
+ { path: '/kategori-produk', component: KategoriProdukIndex, name: 'indexKategoriProduk' },
+ { path: '/kategori-produk/create', component: KategoriProdukCreate, name: 'createKategoriProduk' },
+ { path: '/kategori-produk/:id/edit', component: KategoriProdukEdit, name: 'editKategoriProduk' }
  ]
 
  export default routes;

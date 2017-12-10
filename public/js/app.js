@@ -47818,6 +47818,12 @@ exports.version = version;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_satuan_SatuanCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__components_satuan_SatuanCreate_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_satuan_SatuanEdit_vue__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_satuan_SatuanEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__components_satuan_SatuanEdit_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_kategori_produk_KategoriProdukIndex_vue__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_kategori_produk_KategoriProdukIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__components_kategori_produk_KategoriProdukIndex_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_kategori_produk_KategoriProdukCreate_vue__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_kategori_produk_KategoriProdukCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__components_kategori_produk_KategoriProdukCreate_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_kategori_produk_KategoriProdukEdit_vue__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_kategori_produk_KategoriProdukEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__components_kategori_produk_KategoriProdukEdit_vue__);
 //DASHBOARD
 
 
@@ -47837,6 +47843,11 @@ exports.version = version;
 
 
 
+// master data kategori produk
+
+
+
+
 
 var routes = [{
   path: '/',
@@ -47844,7 +47855,7 @@ var routes = [{
     dashboardIndex: __WEBPACK_IMPORTED_MODULE_0__components_dashboard_Dashboard_vue___default.a
   },
   name: 'indexDashboard'
-}, { path: '/suplier', component: __WEBPACK_IMPORTED_MODULE_4__components_suplier_SuplierIndex_vue___default.a, name: 'indexSuplier' }, { path: '/suplier/create', component: __WEBPACK_IMPORTED_MODULE_5__components_suplier_SuplierCreate_vue___default.a, name: 'createSuplier' }, { path: '/suplier/:id/edit', component: __WEBPACK_IMPORTED_MODULE_6__components_suplier_SuplierEdit_vue___default.a, name: 'editSuplier' }, { path: '/poli', component: __WEBPACK_IMPORTED_MODULE_1__components_poli_PoliIndex_vue___default.a, name: 'indexPoli' }, { path: '/poli/create', component: __WEBPACK_IMPORTED_MODULE_2__components_poli_PoliCreate_vue___default.a, name: 'createPoli' }, { path: '/poli/:id/edit', component: __WEBPACK_IMPORTED_MODULE_3__components_poli_PoliEdit_vue___default.a, name: 'editPoli' }, { path: '/satuan', component: __WEBPACK_IMPORTED_MODULE_7__components_satuan_SatuanIndex_vue___default.a, name: 'indexSatuan' }, { path: '/satuan/create', component: __WEBPACK_IMPORTED_MODULE_8__components_satuan_SatuanCreate_vue___default.a, name: 'createSatuan' }, { path: '/satuan/:id/edit', component: __WEBPACK_IMPORTED_MODULE_9__components_satuan_SatuanEdit_vue___default.a, name: 'editSatuan' }];
+}, { path: '/suplier', component: __WEBPACK_IMPORTED_MODULE_4__components_suplier_SuplierIndex_vue___default.a, name: 'indexSuplier' }, { path: '/suplier/create', component: __WEBPACK_IMPORTED_MODULE_5__components_suplier_SuplierCreate_vue___default.a, name: 'createSuplier' }, { path: '/suplier/:id/edit', component: __WEBPACK_IMPORTED_MODULE_6__components_suplier_SuplierEdit_vue___default.a, name: 'editSuplier' }, { path: '/poli', component: __WEBPACK_IMPORTED_MODULE_1__components_poli_PoliIndex_vue___default.a, name: 'indexPoli' }, { path: '/poli/create', component: __WEBPACK_IMPORTED_MODULE_2__components_poli_PoliCreate_vue___default.a, name: 'createPoli' }, { path: '/poli/:id/edit', component: __WEBPACK_IMPORTED_MODULE_3__components_poli_PoliEdit_vue___default.a, name: 'editPoli' }, { path: '/satuan', component: __WEBPACK_IMPORTED_MODULE_7__components_satuan_SatuanIndex_vue___default.a, name: 'indexSatuan' }, { path: '/satuan/create', component: __WEBPACK_IMPORTED_MODULE_8__components_satuan_SatuanCreate_vue___default.a, name: 'createSatuan' }, { path: '/satuan/:id/edit', component: __WEBPACK_IMPORTED_MODULE_9__components_satuan_SatuanEdit_vue___default.a, name: 'editSatuan' }, { path: '/kategori-produk', component: __WEBPACK_IMPORTED_MODULE_10__components_kategori_produk_KategoriProdukIndex_vue___default.a, name: 'indexKategoriProduk' }, { path: '/kategori-produk/create', component: __WEBPACK_IMPORTED_MODULE_11__components_kategori_produk_KategoriProdukCreate_vue___default.a, name: 'createKategoriProduk' }, { path: '/kategori-produk/:id/edit', component: __WEBPACK_IMPORTED_MODULE_12__components_kategori_produk_KategoriProdukEdit_vue___default.a, name: 'editKategoriProduk' }];
 
 /* harmony default export */ __webpack_exports__["a"] = (routes);
 
@@ -51476,6 +51487,954 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
     require("vue-hot-reload-api")      .rerender("data-v-65957eb2", module.exports)
+  }
+}
+
+/***/ }),
+/* 94 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(95)
+/* template */
+var __vue_template__ = __webpack_require__(96)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/kategori_produk/KategoriProdukIndex.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-2a8f1ce2", Component.options)
+  } else {
+    hotAPI.reload("data-v-2a8f1ce2", Component.options)
+' + '  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 95 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      kategoriProduks: [],
+      kategoriProduksData: {},
+      pencarian: "",
+      url: window.location.origin + "/kategori",
+      loading: true
+    };
+  },
+  watch: {
+    pencarian: function pencarian(newQuestion) {
+      this.searchData();
+    }
+  },
+  mounted: function mounted() {
+    var app = this;
+    app.getKategoriProduk();
+  },
+
+  methods: {
+    getKategoriProduk: function getKategoriProduk(page) {
+      var app = this;
+      if (typeof page === 'undefined') {
+        page = 1;
+      }
+
+      axios.get(app.url + '?page=' + page).then(function (resp) {
+        app.kategoriProduks = resp.data.data;
+        app.kategoriProduksData = resp.data;
+        app.loading = false;
+      }).catch(function (resp) {
+        alert("Could not load Kategori Produk");
+        app.loading = false;
+      });
+    },
+    searchData: function searchData(page) {
+      var app = this;
+      app.loading = true;
+      if (typeof page === 'undefined') {
+        page = 1;
+      }
+
+      axios.get(app.url + '/cari?pencarian=' + app.pencarian + '&page=' + page).then(function (resp) {
+        app.kategoriProduks = resp.data.data;
+        app.kategoriProduksData = resp.data;
+        app.loading = false;
+      }).catch(function (resp) {
+        alert("Tidak dapat memuat Kategori Produk..");
+        app.loading = false;
+      });
+    },
+    deleteEntry: function deleteEntry(id, index, judul) {
+      if (confirm("Yakin Ingin Menghapus Kategori Produk " + judul + " ?")) {
+        var app = this;
+        axios.delete(app.url + '/' + id).then(function (resp) {
+          app.getKategoriProduk();
+          app.alert("Berhasil Menghapus Kategori Produk " + judul);
+        }).catch(function (resp) {
+          alert("Tidak dapat menghapus Kategori Produk!");
+        });
+      }
+    },
+    alert: function alert(pesan) {
+      this.$swal({
+        title: "Berhasil!",
+        text: pesan,
+        icon: "success"
+      });
+    }
+  }
+});
+
+/***/ }),
+/* 96 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "row" }, [
+    _c("div", { staticClass: "col-md-12" }, [
+      _vm._m(0, false, false),
+      _vm._v(" "),
+      _c("div", { staticClass: "card" }, [
+        _vm._m(1, false, false),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-content" }, [
+          _c("h4", { staticClass: "card-title" }, [
+            _vm._v(" Kategori Produk ")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "toolbar" }, [
+            _c(
+              "p",
+              [
+                _c(
+                  "router-link",
+                  {
+                    staticClass: "btn btn-primary",
+                    attrs: { to: { name: "createKategoriProduk" } }
+                  },
+                  [_vm._v("Tambah Kategori Produk")]
+                )
+              ],
+              1
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "table-responsive material-datatables" }, [
+            _c("table", { staticClass: "table table-striped table-hover " }, [
+              _vm._m(2, false, false),
+              _vm._v(" "),
+              _vm.kategoriProduks.length
+                ? _c(
+                    "tbody",
+                    { staticClass: "data-ada" },
+                    _vm._l(_vm.kategoriProduks, function(kategori, index) {
+                      return _c("tr", [
+                        _c("td", [_vm._v(_vm._s(kategori.nama_kategori))]),
+                        _vm._v(" "),
+                        _c(
+                          "td",
+                          [
+                            _c(
+                              "router-link",
+                              {
+                                staticClass: "btn btn-xs btn-default",
+                                attrs: {
+                                  to: {
+                                    name: "editKategoriProduk",
+                                    params: { id: kategori.id }
+                                  },
+                                  id: "edit-" + kategori.id
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                     Edit \n                   "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "btn btn-xs btn-danger",
+                                attrs: {
+                                  href: "#",
+                                  id: "delete-" + kategori.id
+                                },
+                                on: {
+                                  click: function($event) {
+                                    _vm.deleteEntry(
+                                      kategori.id,
+                                      index,
+                                      kategori.nama_kategori
+                                    )
+                                  }
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                   Delete\n                 "
+                                )
+                              ]
+                            )
+                          ],
+                          1
+                        )
+                      ])
+                    })
+                  )
+                : _c("tbody", { staticClass: "data-tidak-ada" }, [
+                    _vm._m(3, false, false)
+                  ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", { staticClass: "breadcrumb" }, [
+      _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Home")])]),
+      _vm._v(" "),
+      _c("li", { staticClass: "active" }, [_vm._v("Kategori Produk")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "card-header card-header-icon",
+        attrs: { "data-background-color": "purple" }
+      },
+      [_c("i", { staticClass: "material-icons" }, [_vm._v("account_circle")])]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("th", [_vm._v("Nama Kategori Produk ")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Aksi")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("td", { staticClass: "text-center", attrs: { colspan: "4" } }, [
+        _vm._v("Tidak Ada Data")
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-2a8f1ce2", module.exports)
+  }
+}
+
+/***/ }),
+/* 97 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(99)
+/* template */
+var __vue_template__ = __webpack_require__(100)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/kategori_produk/KategoriProdukCreate.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-d7ebe9e2", Component.options)
+  } else {
+    hotAPI.reload("data-v-d7ebe9e2", Component.options)
+' + '  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 98 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(101)
+/* template */
+var __vue_template__ = __webpack_require__(102)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/kategori_produk/KategoriProdukEdit.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-15f7c3dd", Component.options)
+  } else {
+    hotAPI.reload("data-v-15f7c3dd", Component.options)
+' + '  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 99 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            errors: [],
+            url: window.location.origin + window.location.pathname + "/kategori",
+            kategori: {
+                nama_kategori: ''
+            },
+            message: ''
+        };
+    },
+    methods: {
+        saveForm: function saveForm() {
+            var app = this;
+            var newkategori = app.kategori;
+            axios.post(app.url, newkategori).then(function (resp) {
+                app.message = 'Sukses : Berhasil Menambah kategori ' + app.kategori.nama_kategori;
+                app.alert(app.message);
+                app.kategori.nama_kategori = '';
+                app.errors = '';
+                app.$router.replace('/kategori-produk/');
+            }).catch(function (resp) {
+                app.success = false;
+                app.errors = resp.response.data.errors;
+            });
+        },
+        alert: function alert(pesan) {
+            this.$swal({
+                title: "Berhasil!",
+                text: pesan,
+                icon: "success"
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 100 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "row" }, [
+    _c("div", { staticClass: "col-md-12" }, [
+      _c("ul", { staticClass: "breadcrumb" }, [
+        _vm._m(0, false, false),
+        _vm._v(" "),
+        _c(
+          "li",
+          [
+            _c(
+              "router-link",
+              { attrs: { to: { name: "indexKategoriProduk" } } },
+              [_vm._v("Kategori Produk")]
+            )
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("li", { staticClass: "active" }, [_vm._v("Tambah Kategori Produk")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "card" }, [
+        _vm._m(1, false, false),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-content" }, [
+          _c("h4", { staticClass: "card-title" }, [
+            _vm._v(" Kategori Produk ")
+          ]),
+          _vm._v(" "),
+          _c("div", [
+            _c(
+              "form",
+              {
+                staticClass: "form-horizontal",
+                on: {
+                  submit: function($event) {
+                    $event.preventDefault()
+                    _vm.saveForm()
+                  }
+                }
+              },
+              [
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-2 control-label",
+                      attrs: { for: "name" }
+                    },
+                    [_vm._v("Nama Kategori Produk")]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.kategori.nama_kategori,
+                          expression: "kategori.nama_kategori"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        required: "",
+                        autocomplete: "off",
+                        placeholder: "Nama Kategori Produk",
+                        type: "text",
+                        name: "nama_kategori",
+                        autofocus: ""
+                      },
+                      domProps: { value: _vm.kategori.nama_kategori },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.kategori,
+                            "nama_kategori",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _vm.errors.nama_kategori
+                      ? _c(
+                          "span",
+                          {
+                            staticClass: "label label-danger",
+                            attrs: { id: "nama_kategori_error" }
+                          },
+                          [_vm._v(_vm._s(_vm.errors.nama_kategori[0]))]
+                        )
+                      : _vm._e()
+                  ])
+                ]),
+                _vm._v(" "),
+                _vm._m(2, false, false)
+              ]
+            )
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [_c("a", { attrs: { href: " " } }, [_vm._v("Home")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "card-header card-header-icon",
+        attrs: { "data-background-color": "purple" }
+      },
+      [_c("i", { staticClass: "material-icons" }, [_vm._v("dns")])]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group" }, [
+      _c("div", { staticClass: "col-md-4 col-md-offset-2" }, [
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-primary",
+            attrs: { id: "btnSimpankategori", type: "submit" }
+          },
+          [
+            _c("i", { staticClass: "material-icons" }, [_vm._v("send")]),
+            _vm._v(" Submit")
+          ]
+        )
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-d7ebe9e2", module.exports)
+  }
+}
+
+/***/ }),
+/* 101 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    mounted: function mounted() {
+        this.getkategori();
+    },
+
+    data: function data() {
+        return {
+            kategoriId: null,
+            kategori: {
+                nama_kategori: ''
+            },
+            url: window.location.origin + window.location.pathname + "/kategori",
+            errors: []
+        };
+    },
+    methods: {
+        saveForm: function saveForm() {
+            var app = this;
+            var newkategori = app.kategori;
+            axios.patch(app.url + '/' + app.kategoriId, newkategori).then(function (resp) {
+                app.alert();
+                app.$router.replace('/kategori-produk/');
+            }).catch(function (resp) {
+                console.log(resp);
+                app.errors = resp.response.data.errors;
+                alert("Could not create your kategori");
+            });
+        },
+        alert: function alert() {
+            this.$swal({
+                title: "Berhasil Mengubah kategori!",
+                icon: "success"
+            });
+        },
+        getkategori: function getkategori() {
+            var app = this;
+            var id = app.$route.params.id;
+            app.kategoriId = id;
+
+            axios.get(app.url + '/' + id).then(function (resp) {
+                app.kategori = resp.data;
+            }).catch(function () {
+                alert("Could not load your kategori");
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 102 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "row" }, [
+    _c("div", { staticClass: "col-md-12" }, [
+      _c("ul", { staticClass: "breadcrumb" }, [
+        _vm._m(0, false, false),
+        _vm._v(" "),
+        _c(
+          "li",
+          [
+            _c(
+              "router-link",
+              { attrs: { to: { name: "indexKategoriProduk" } } },
+              [_vm._v("Kategori Produk")]
+            )
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("li", { staticClass: "active" }, [_vm._v("Edit Kategori Produk")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "card" }, [
+        _vm._m(1, false, false),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-content" }, [
+          _c("h4", { staticClass: "card-title" }, [
+            _vm._v(" Kategori Produk ")
+          ]),
+          _vm._v(" "),
+          _c("div", [
+            _c(
+              "form",
+              {
+                staticClass: "form-horizontal",
+                on: {
+                  submit: function($event) {
+                    $event.preventDefault()
+                    _vm.saveForm()
+                  }
+                }
+              },
+              [
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-2 control-label",
+                      attrs: { for: "name" }
+                    },
+                    [_vm._v("Nama Kategori Produk")]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.kategori.nama_kategori,
+                          expression: "kategori.nama_kategori"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        required: "",
+                        autocomplete: "off",
+                        placeholder: "Nama Kategori Produk",
+                        type: "text",
+                        autofocus: "",
+                        name: "nama_kategori"
+                      },
+                      domProps: { value: _vm.kategori.nama_kategori },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.kategori,
+                            "nama_kategori",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _vm.errors.nama_kategori
+                      ? _c("span", { staticClass: "label label-danger" }, [
+                          _vm._v(_vm._s(_vm.errors.nama_kategori[0]))
+                        ])
+                      : _vm._e()
+                  ])
+                ]),
+                _vm._v(" "),
+                _vm._m(2, false, false)
+              ]
+            )
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [_c("a", { attrs: { href: " " } }, [_vm._v("Home")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "card-header card-header-icon",
+        attrs: { "data-background-color": "purple" }
+      },
+      [_c("i", { staticClass: "material-icons" }, [_vm._v("dns")])]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group" }, [
+      _c("div", { staticClass: "col-md-4 col-md-offset-2" }, [
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-primary",
+            attrs: { id: "btnSimpankategori", type: "submit" }
+          },
+          [
+            _c("i", { staticClass: "material-icons" }, [_vm._v("send")]),
+            _vm._v(" Submit")
+          ]
+        )
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-15f7c3dd", module.exports)
   }
 }
 
