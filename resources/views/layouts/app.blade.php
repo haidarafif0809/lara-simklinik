@@ -254,14 +254,14 @@
                                         </router-link>
                                     </li>
                                     <li>
-                                        <a href="{{ route('suplier.index') }}">
+                                        <router-link :to="{name: 'indexSuplier'}">
                                             <span class="sidebar-mini">
                                                 SP
                                             </span>
                                             <span class="sidebar-normal">
                                                 Suplier
                                             </span>
-                                        </a>
+                                        </router-link>
                                     </li>
                                     <li>
                                         <a href="{{ route('gudang.index') }}">
